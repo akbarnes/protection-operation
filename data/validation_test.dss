@@ -1,0 +1,26 @@
+clear
+new circuit.validation_test
+~ basekv=0.4 1.0 0 50 3 320000 320000
+
+new transformer.t1 phases=3 windings=2 buses=(Sourcebus subbus) conns='delta wye'
+~ kvs="0.4 115" kvas="20000 20000" xhl=7
+
+New linecode.556MCM nphases=3 basefreq=50  ! ohms per 5 mile
+~ rmatrix = ( 0.1000 | 0.0400    0.1000 |  0.0400    0.0400    0.1000)
+~ xmatrix = ( 0.0583 |  0.0233    0.0583 | 0.0233    0.0233    0.0583)
+~ cmatrix = (50.92958178940651  | -0  50.92958178940651 | -0 -0 50.92958178940651)
+
+new line.OH1 bus1=subbus.1.2.3 bus2=linefault.1.2.3 linecode=556mcm length=2.5
+new line.OH2 bus1=linefault.1.2.3 bus2=loadbus.1.2.3 linecode=556mcm length=2.5
+new line.OH3 bus1=subbus.1.2.3 bus2=loadbus2.1.2.3 linecode=556mcm length=0.1
+
+new load.L1 phases=3 loadbus.1.2.3 kw=100 kvar=10 model=1
+new load.L2 phases=3 loadbus.1.2.3 kw=100 kvar=10 model=1
+new load.L3 phases=3 loadbus2.1.2.3 kw=100 kvar=10 model=1
+
+set voltagebases=[0.4 115]
+set tolerance=0.000001
+set defaultbasefreq=50
+calcvoltagebases
+
+solve

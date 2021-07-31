@@ -1,0 +1,54 @@
+<Meta name="ParallelCables">
+  <messagelist>
+    <message status="normal" label="build" groupid="100006">
+      <User scope="ParallelCables" name="Main" status="normal" link="211835325" /><![CDATA[Generating network and source code 'C:\Users\305232\Repos\PSCAD\ParallelCables.gf42\Main.f'.]]></message>
+    <message status="warning" label="build" groupid="205001">
+      <User scope="ParallelCables" name="master:cable_interface" status="warning" link="915128727" /><![CDATA[Suspicious floating terminal at node 'NT_2'.]]></message>
+    <message status="warning" label="build" groupid="205001">
+      <User scope="ParallelCables" name="master:cable_interface" status="warning" link="915128727" /><![CDATA[Suspicious floating terminal at node 'NT_4'.]]></message>
+    <message status="warning" label="build" groupid="205001">
+      <User scope="ParallelCables" name="master:cable_interface" status="warning" link="915128727" /><![CDATA[Suspicious floating terminal at node 'NT_6'.]]></message>
+    <message status="warning" label="build" groupid="205001">
+      <User scope="ParallelCables" name="master:cable_interface" status="warning" link="435188807" /><![CDATA[Suspicious floating terminal at node 'NT_8'.]]></message>
+    <message status="warning" label="build" groupid="205001">
+      <User scope="ParallelCables" name="master:cable_interface" status="warning" link="435188807" /><![CDATA[Suspicious floating terminal at node 'NT_10'.]]></message>
+    <message status="warning" label="build" groupid="205001">
+      <User scope="ParallelCables" name="master:cable_interface" status="warning" link="435188807" /><![CDATA[Suspicious floating terminal at node 'NT_12'.]]></message>
+    <message status="normal" label="build" scope="ParallelCables" groupid="100006"><![CDATA[Generating 'C:\Users\305232\Repos\PSCAD\ParallelCables.gf42\ParallelCables.map'.]]></message>
+    <message status="normal" label="build" scope="ParallelCables" groupid="100014"><![CDATA[The total number of live nodes: 6]]></message>
+    <message status="normal" label="build" scope="ParallelCables" groupid="400000"><![CDATA[Time for Compile: 31ms  Make: 0ms]]></message>
+    <message status="normal" label="build" scope="ParallelCables" groupid="100015"><![CDATA[Will execute (1): call C:\Program Files (x86)\GFortran\4.2.1\bin\gf42vars.bat]]></message>
+    <message status="normal" label="build" scope="ParallelCables" groupid="100015"><![CDATA[Will execute (1): call "C:\Program Files (x86)\GFortran\4.2.1\bin\gf42vars.bat"]]></message>
+    <message status="normal" label="build" scope="ParallelCables" groupid="100015"><![CDATA[Will execute (2): make -f ParallelCables.mak]]></message>
+    <message status="normal" label="build" scope="ParallelCables" groupid="100015"><![CDATA[Will execute (2): "C:\Users\305232\Repos\PSCAD\ParallelCables.gf42\ParallelCables.mak.bat"]]></message>
+    <message status="normal" label="build" scope="ParallelCables" groupid="100005"><![CDATA[Creating EMTDC executable...]]></message>
+    <message status="normal" label="build" scope="ParallelCables" groupid="0"><![CDATA[C:\Users\305232\Repos\PSCAD\ParallelCables.gf42>call "C:\Program Files (x86)\GFortran\4.2.1\bin\gf42vars.bat" ]]></message>
+    <message status="normal" label="build" scope="ParallelCables" groupid="100004"><![CDATA[Compiling 'Main.f' into object code.]]></message>
+    <message status="normal" label="build" scope="ParallelCables" groupid="100012"><![CDATA[Linking objects and libraries into binary 'ParallelCables.exe']]></message>
+    <message status="normal" label="build" scope="ParallelCables" groupid="400000"><![CDATA[Solve Time = 16ms]]></message>
+  </messagelist>
+  <List classid="Settings" />
+  <ViewContext>
+    <Window defn="BusDifferentialProtection:Main" call="0" />
+  </ViewContext>
+  <List classid="View">
+    <View name="Main" zoomlevel="7" scrollx="0" scrolly="3" />
+    <View name="TLine_1" zoomlevel="6" scrollx="0" scrolly="0" />
+    <View name="Cable_1" zoomlevel="6" scrollx="0" scrolly="0" />
+  </List>
+  <Output device="EMTDC" version="2010" date="2021/05/15" time="11:56:43.000000">
+    <Domain name="Time" unit="s" mult="0.0" skew="0.0">
+      <Sample rate="4000.0" end="2000" />
+    </Domain>
+    <List classid="Analog">
+      <Analog name="Main(0):i1a" index="0" id="519976702:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0):va1" index="1" id="2086789168:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0):va2" index="2" id="2046879346:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0):v3a" index="3" id="865276161:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0):i2a" index="4" id="498857574:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+      <Analog name="Main(0):i3a" index="5" id="453591947:0" label="" dim="1" unit="pu" min="-2.0" max="2.0" />
+    </List>
+    <List classid="Digital" />
+  </Output>
+  <Catalog count="0" />
+</Meta>

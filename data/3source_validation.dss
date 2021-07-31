@@ -1,0 +1,26 @@
+clear
+new circuit.3source_validation
+~ basekv=0.4 1.0 0 50 3 320000 320000
+
+new vsource.source2
+~ bus1=sourcebus2 basekv=0.4 1.0 0 50 3 320000 320000
+
+new vsource.source3
+~ bus1=sourcebus3 basekv=0.4 1.0 0 50 3 320000 320000
+
+new linecode.556mcm nphases=3 basefreq=50
+~ rmatrix = ( 0.1000 | 0.0400    0.1000 |  0.0400    0.0400    0.1000)
+~ xmatrix = ( 0.0583 |  0.0233    0.0583 | 0.0233    0.0233    0.0583)
+~ cmatrix = (50.92958178940651  | -0  50.92958178940651 | -0 -0 50.92958178940651)
+
+new line.line1 bus1=sourcebus.1.2.3 bus2=center.1.2.3 linecode=556mcm length=1
+new line.line2 bus1=sourcebus2.1.2.3 bus2=center.1.2.3 linecode=556mcm length=1
+new line.line3 bus1=center.1.2.3 bus2=faultbus.1.2.3 linecode=556mcm length=0.5
+new line.line4 bus1=faultbus.1.2.3 bus2=sourcebus3.1.2.3 linecode=556mcm length=0.5
+
+set voltagebases=[0.4]
+set tolerance=0.000001
+set defaultbasefreq=50
+calcvoltagebases
+
+solve
